@@ -36,12 +36,12 @@ C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_i2s/libesp_driver_i2
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/sdmmc/libsdmmc.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_sdmmc/libesp_driver_sdmmc.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a
-C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_sdio/libesp_driver_sdio.a
-C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_dac/libesp_driver_dac.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_rmt/libesp_driver_rmt.a
+C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_tsens/libesp_driver_tsens.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_sdm/libesp_driver_sdm.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a
+C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_driver_usb_serial_jtag/libesp_driver_usb_serial_jtag.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/driver/libdriver.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_phy/libesp_phy.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/esp_vfs_console/libesp_vfs_console.a
@@ -78,6 +78,8 @@ C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/mqtt/libmqtt.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/perfmon/libperfmon.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/spiffs/libspiffs.a
+C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/touch_element/libtouch_element.a
+C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/usb/libusb.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/pedrominatel__sht4x/libpedrominatel__sht4x.a
 C:/Users/lucas/Currentt_Test_Lucas/build/esp-idf/main/libmain.a

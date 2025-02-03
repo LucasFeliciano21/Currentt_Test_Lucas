@@ -1,35 +1,39 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C6 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+# Currentt test project
 
-# _Sample project_
-
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
-
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
-
+Develop an I2C communication interface using the ESP-IDF framework (version 5.3) for the 
+[ESP32-S3](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/index.html). The goal 
+is to implement a driver for an I2C-based temperature and humidity sensor and read data 
+periodically. The sensor we are using is the [SHT40-AD1B-R2](https://nl.mouser.com/datasheet/2/682/HT_DS_Datasheet_SHT4x-3454169.pdf).
+Your program should initialize the I2C interface, configure the sensor, and periodically read and output the 
+temperature and humidity data via UART. 
 
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+## Key requirements of the project
+1. I2C Initialization: 
+    ○ Configure the ESP32-S3 as an I2C master. 
+    ○ Set up the appropriate I2C pins. 
+    ○ Implement error handling for initialization failures. 
+2. Sensor Configuration: 
+    ○ Configure the sensor with the appropriate settings. 
+    ○ Verify the sensor is correctly connected by reading its device ID or checking its 
+    status register. 
+3. Reading Temperature and Humidity Data: 
+    ○ Implement a function to read the data from the sensor. 
+    ○ Convert the raw data to a human-readable format (e.g., Celsius). 
+    ○ Handle edge cases such as communication failures, incorrect data, or sensor 
+    errors. 
+4. Periodic Data Logging: 
+    ○ Use a FreeRTOS task to read data periodically (e.g., every 2 seconds). 
+    ○ Print the data from the main task to the UART console. 
+5. Code Repository 
+    ○ Use Github or Gitlab to publish the code. 
+    ○ Use GIT for version control. 
+    ○ Bonus: Add a CI configuration to build the hex files in Github or Gitlab 
+    automatically. 
 
-## Example folder contents
+## Notes from development
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+○To make compilation and debugging easier, the USB-JTAG, which on the schematic is connected to a possible USB connector. For RS485 data logging, if required to log to the UART0, it would be necessary to implement the protocol to make the data flow to the logging component of the system. So to meet the key requirements, a **REPORT_OVER_CONSOLE**  flag was created that allowed the device to report any other information  (if the console level is set to E/W/I) to the same console output.
+○The code was made using a Component for the SHT4x sensor, which handles the initialization, read-out, conversion and eventually the deletion of the device in case of an error to free up memory. It would be required to implement a function that would deal with the failure, generating an output or log the error in a file that can be read by a user/technician
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
 
-Below is short explanation of remaining files in the project folder.
-
-```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.

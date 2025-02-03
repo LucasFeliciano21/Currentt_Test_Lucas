@@ -17,5 +17,5 @@ direct_dependencies:
 - idf
 - pedrominatel/sht4x
 manifest_hash: f8339863fd2b9bc404a1343ce5abbbd1de9dd26d24a60957b7e7dbab9328199e
-target: esp32
+target: esp32s3
 version: 2.0.0
