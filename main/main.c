@@ -23,9 +23,9 @@
 #define REPORT_OVER_CONSOLE false
 
 // UART definition
-#define BUF_SIZE (1024)
-#define TXD_PIN (GPIO_NUM_17)
-#define RXD_PIN (GPIO_NUM_16)
+// #define BUF_SIZE (1024)
+// #define TXD_PIN (GPIO_NUM_17)
+// #define RXD_PIN (GPIO_NUM_16)
 
 #define SHT4X_SDA_GPIO 14 /*!< gpio number for I2C master */
 #define SHT4X_SCL_GPIO 9 /*!< gpio number for I2C master clock */
