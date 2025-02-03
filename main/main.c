@@ -27,8 +27,8 @@
 #define TXD_PIN (GPIO_NUM_17)
 #define RXD_PIN (GPIO_NUM_16)
 
-#define SHT4X_SDA_GPIO CONFIG_SHT4X_I2C_SDA /*!< gpio number for I2C master data set up on the sdkconfig */
-#define SHT4X_SCL_GPIO CONFIG_SHT4X_I2C_SCL /*!< gpio number for I2C master clock */
+#define SHT4X_SDA_GPIO 14 /*!< gpio number for I2C master */
+#define SHT4X_SCL_GPIO 9 /*!< gpio number for I2C master clock */
 
 static const char *TAG = "SHT4X:";
 static const char *I2CTAG = "I2C:";

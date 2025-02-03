@@ -12,6 +12,7 @@
         "sdkconfig.h": "c",
         "task.h": "c",
         "stdio.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "sht4x.h": "c"
     }
 }
