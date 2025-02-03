@@ -1,0 +1,17 @@
+{
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.espIdfPathWin": "C:\\Users\\lucas\\esp\\v5.3.2\\esp-idf",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "idf.portWin": "COM10",
+    "idf.toolsPathWin": "C:\\Users\\lucas\\.espressif",
+    "files.associations": {
+        "freertos.h": "c",
+        "i2c.h": "c",
+        "sdkconfig.h": "c",
+        "task.h": "c",
+        "stdio.h": "c",
+        "math.h": "c"
+    }
+}
